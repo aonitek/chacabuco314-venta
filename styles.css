@@ -89,6 +89,19 @@
     line-height:1.8;
   }
   .img-slot .img-label b{display:block;color:var(--gold-bright);font-size:12px;letter-spacing:0.08em;margin-bottom:4px;}
+  .img-slot.has-image{border-style:solid;background:var(--cream);}
+  .img-slot.has-image img{width:100%;height:100%;object-fit:contain;padding:14px;display:block;}
+  .img-caption{
+    position:absolute;
+    left:0;bottom:0;
+    background:rgba(15,14,12,0.85);
+    color:var(--gold-bright);
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding:9px 16px;
+    font-weight:600;
+  }
 
   header{
     position:relative;
@@ -111,7 +124,7 @@
   .hero{
     position:relative;
     z-index:2;
-    padding:40px 0 100px;
+    padding:40px 0 80px;
   }
   .hero-grid{
     display:grid;
@@ -145,6 +158,22 @@
     border-radius:2px;
     transform:translateY(-18px);
   }
+
+  .tour{
+    position:relative;
+    z-index:2;
+    padding:0 0 100px;
+  }
+  .tour-head{max-width:640px;margin-bottom:32px;}
+  .tour-frame{
+    position:relative;
+    aspect-ratio:16/9;
+    border-radius:2px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    background:var(--bg-panel-2);
+  }
+  .tour-frame video{width:100%;height:100%;object-fit:cover;display:block;background:#000;}
 
   .rent-math{
     position:relative;
@@ -276,18 +305,19 @@
     z-index:2;
     padding:56px 0;
   }
-  .distrito-box{
-    display:flex;
-    gap:24px;
-    align-items:flex-start;
-    padding:28px 32px;
+  .distrito-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
     border:1px solid var(--line-soft);
     border-radius:2px;
+    overflow:hidden;
     background:var(--bg-panel);
   }
-  .distrito-box .label{flex-shrink:0;padding-top:3px;}
-  .distrito-box p{font-size:14px;color:var(--text-dim);line-height:1.75;max-width:78ch;}
-  .distrito-box p b{color:var(--text);font-weight:600;}
+  .distrito-text{padding:34px 36px;}
+  .distrito-text p{font-size:14px;color:var(--text-dim);line-height:1.75;margin-top:14px;}
+  .distrito-text p b{color:var(--text);font-weight:600;}
+  .distrito-img{position:relative;background:var(--cream);min-height:240px;}
+  .distrito-img img{width:100%;height:100%;object-fit:contain;padding:14px;display:block;}
 
   .faq{
     position:relative;
@@ -383,11 +413,12 @@
   .wa-sticky:hover{background:var(--gold-bright);}
 
   @media (max-width:860px){
-    .hero-grid, .rent-grid, .detail-grid, .loc-grid, .inv-panel, .contact-grid{
+    .hero-grid, .rent-grid, .detail-grid, .loc-grid, .inv-panel, .contact-grid, .distrito-grid{
       grid-template-columns:1fr;
     }
     .hero-img{order:-1;transform:none;aspect-ratio:16/10;}
     .wrap{padding:0 22px;}
     .inv-panel{padding:32px;}
     .form-panel{padding:26px;}
+    .distrito-img{min-height:220px;}
   }
