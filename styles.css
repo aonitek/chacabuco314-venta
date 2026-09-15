@@ -275,32 +275,31 @@
     display:grid;
     grid-template-columns:0.95fr 1.05fr;
     gap:56px;
+    align-items:center;
   }
   .contact-copy h2{font-size:clamp(28px,3.4vw,42px);line-height:1.15;margin-bottom:18px;}
   .contact-copy p{color:var(--text-dim);font-size:15.5px;max-width:38ch;margin-bottom:28px;}
   .contact-fact{display:flex;gap:12px;padding:14px 0;border-top:1px solid var(--line-soft);font-size:14px;color:var(--text-dim);}
   .contact-fact:last-child{border-bottom:1px solid var(--line-soft);}
-  .form-panel{
+  .contact-panel{
     background:var(--bg-panel-2);
     border:1px solid var(--line);
     border-radius:2px;
-    padding:40px;
+    padding:44px;
   }
-  .field{margin-bottom:18px;}
-  .field label{display:block;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--text-faint);margin-bottom:8px;}
-  .field input, .field select, .field textarea{
-    width:100%;
-    background:var(--bg-panel);
-    border:1px solid var(--line-soft);
-    border-radius:2px;
-    padding:13px 14px;
-    color:var(--text);
-    font-family:'Libre Franklin',sans-serif;
-    font-size:14.5px;
+  .contact-channel{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    padding:24px 0;
+    border-bottom:1px solid var(--line-soft);
   }
-  .field input:focus, .field select:focus, .field textarea:focus{outline:none;border-color:var(--gold);}
-  .field textarea{resize:vertical;min-height:80px;}
-  .form-submit{width:100%;justify-content:center;margin-top:8px;}
+  .contact-channel:first-child{padding-top:0;}
+  .contact-channel:last-child{border-bottom:none;padding-bottom:0;}
+  .contact-channel-label{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-faint);margin-bottom:6px;}
+  .contact-channel-value{font-family:'Fraunces', serif;font-size:19px;color:var(--text);}
+  .contact-channel .btn{padding:12px 22px;font-size:13.5px;flex-shrink:0;}
 
   footer{
     position:relative;z-index:2;
@@ -335,6 +334,7 @@
     }
     .hero-img{order:-1;transform:none;aspect-ratio:16/10;}
     .wrap{padding:0 22px;}
-    .form-panel{padding:26px;}
+    .contact-panel{padding:30px;}
+    .contact-channel{flex-direction:column;align-items:flex-start;gap:12px;}
     .distrito-img{min-height:220px;}
   }
