@@ -171,6 +171,15 @@
     color:var(--gold-bright);
     line-height:1;
   }
+  .feature-chip{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-size:14px;
+    color:var(--text-dim);
+    margin-bottom:30px;
+  }
+  .feature-chip-dot{color:var(--gold);font-weight:600;}
   .hero-cta-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
   .hero-img{
     aspect-ratio:4/5;
