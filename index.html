@@ -340,8 +340,8 @@
         <a href="#ficha" class="btn btn-ghost">Ver ficha técnica</a>
       </div>
     </div>
-    <div class="img-slot hero-img">
-      <div class="img-label"><b>Foto principal</b>Ventanal / vista de esquina<br>(mejor luz natural del día)</div>
+    <div class="img-slot hero-img has-image cover">
+      <img src="https://app.aonitek.com/objects/quick-uploads/124/6fdc7a1ebc073010.jpg" alt="Vista de la oficina en Chacabuco 314, Piso 6">
     </div>
   </div>
 </section>
@@ -354,8 +354,8 @@
     </div>
     <div class="tour-frame">
       <video controls playsinline preload="metadata">
-        <source src="https://app.aonitek.com/objects/quick-uploads/124/e0ae19edd6957056.mp4" type="video/mp4">
-        Tu navegador no soporta la reproducción de video. <a href="https://app.aonitek.com/objects/quick-uploads/124/e0ae19edd6957056.mp4">Ver el video acá.</a>
+        <source src="https://app.aonitek.com/objects/quick-uploads/124/231b6801b9ffc23a.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video. <a href="https://app.aonitek.com/objects/quick-uploads/124/231b6801b9ffc23a.mp4">Ver el video acá.</a>
       </video>
     </div>
   </div>
@@ -368,16 +368,36 @@
       <h2 style="font-size:clamp(28px,3.2vw,40px);margin-top:14px;">Todo lo que necesitás saber, sin sorpresas en la visita.</h2>
     </div>
     <div class="detail-grid">
-      <div class="gallery">
-        <div class="img-slot g-big has-image">
+      <div class="gallery-stack">
+        <div class="img-slot gallery-big has-image">
           <img src="https://raw.githubusercontent.com/aonitek/chacabuco314-venta/refs/heads/main/Imagenes/plano_oficina.jpg.jpeg" alt="Plano de la oficina, Piso 6, Oficina 53, Chacabuco 314">
           <span class="img-caption">Plano de la unidad</span>
         </div>
-        <div class="img-slot g-small">
-          <div class="img-label"><b>Galería · foto 2</b>Ventanal y vista de esquina (interior)</div>
-        </div>
-        <div class="img-slot g-small">
-          <div class="img-label"><b>Galería · foto 3</b>Resto del espacio interior</div>
+
+        <div class="carousel">
+          <div class="carousel-track" id="officeCarousel">
+            <div class="img-slot carousel-slide">
+              <div class="img-label"><b>Foto 1 / 6</b>Pendiente de carga</div>
+            </div>
+            <div class="img-slot carousel-slide">
+              <div class="img-label"><b>Foto 2 / 6</b>Pendiente de carga</div>
+            </div>
+            <div class="img-slot carousel-slide">
+              <div class="img-label"><b>Foto 3 / 6</b>Pendiente de carga</div>
+            </div>
+            <div class="img-slot carousel-slide">
+              <div class="img-label"><b>Foto 4 / 6</b>Pendiente de carga</div>
+            </div>
+            <div class="img-slot carousel-slide">
+              <div class="img-label"><b>Foto 5 / 6</b>Pendiente de carga</div>
+            </div>
+            <div class="img-slot carousel-slide">
+              <div class="img-label"><b>Foto 6 / 6</b>Pendiente de carga</div>
+            </div>
+          </div>
+          <button class="carousel-btn prev" onclick="carouselMove(-1)" aria-label="Foto anterior">‹</button>
+          <button class="carousel-btn next" onclick="carouselMove(1)" aria-label="Foto siguiente">›</button>
+          <div class="carousel-dots" id="carouselDots"></div>
         </div>
       </div>
       <div class="ficha">
@@ -463,5 +483,8 @@
   </div>
 </footer>
 
+
+
+  <script src="script.js"></script>
 </body>
 </html>
