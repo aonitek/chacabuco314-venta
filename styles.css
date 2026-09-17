@@ -91,6 +91,7 @@
   .img-slot .img-label b{display:block;color:var(--gold-bright);font-size:12px;letter-spacing:0.08em;margin-bottom:4px;}
   .img-slot.has-image{border-style:solid;background:var(--cream);}
   .img-slot.has-image img{width:100%;height:100%;object-fit:contain;padding:14px;display:block;}
+  .img-slot.has-image.cover img{object-fit:cover;padding:0;}
   .img-caption{
     position:absolute;
     left:0;bottom:0;
@@ -214,9 +215,51 @@
     grid-template-columns:1.1fr 0.9fr;
     gap:48px;
   }
-  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  .gallery .g-big{grid-column:1/3;aspect-ratio:16/10;}
-  .gallery .g-small{aspect-ratio:4/5;}
+  .gallery-stack{display:flex;flex-direction:column;gap:14px;}
+  .gallery-big{aspect-ratio:16/10;}
+
+  .carousel{position:relative;}
+  .carousel-track{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    gap:14px;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+    border-radius:2px;
+  }
+  .carousel-track::-webkit-scrollbar{display:none;}
+  .carousel-slide{
+    flex:0 0 100%;
+    scroll-snap-align:start;
+    aspect-ratio:16/10;
+  }
+  .carousel-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(15,14,12,0.72);
+    color:var(--gold-bright);
+    border:1px solid var(--line);
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    font-size:18px;
+    font-family:'Libre Franklin', sans-serif;
+    z-index:3;
+    transition:background .2s ease;
+  }
+  .carousel-btn:hover{background:rgba(15,14,12,0.9);}
+  .carousel-btn.prev{left:12px;}
+  .carousel-btn.next{right:12px;}
+  .carousel-dots{display:flex;gap:8px;justify-content:center;margin-top:14px;}
+  .carousel-dot{width:7px;height:7px;border-radius:50%;background:var(--line);cursor:pointer;border:none;padding:0;}
+  .carousel-dot.active{background:var(--gold);}
+
   .ficha{background:var(--bg-panel);border:1px solid var(--line-soft);border-radius:2px;padding:8px 0;}
   .ficha-row{
     display:flex;
